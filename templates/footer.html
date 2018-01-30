@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block footer %}
+    {% if now %}
+    <p>{{ now }}</p>
+    {% else %}
+    <p>本文内容选自网络</p>
+    {% endif %}
+{% endblock %}
+</html>
