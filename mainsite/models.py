@@ -21,3 +21,8 @@ class Product(models.Model):
         ('L', 'Large'),
     )
     size = models.CharField(max_length=1, choices=SIZES)
+    name = models.TextField(null=True)
+    price = models.CharField(max_length=5,null=True)
+
+    def __unicode__(self):
+        return self.size
