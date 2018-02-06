@@ -55,4 +55,8 @@ def listing(request):
     return HttpResponse(html.format(tags))
 
 
-
+def about(request):
+    template = get_template('about.html')
+    p = Port.objects.get(id=1)
+    html = template.render({'port':p})
+    return HttpResponse(html)

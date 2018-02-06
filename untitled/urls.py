@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from mainsite.views import homepage
-from mainsite.views import showpage,listing
+from mainsite.views import showpage,listing, about
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index/$',homepage),
     url(r'^port/(\w+)$',showpage),
     url(r'^list/$',listing),
+    url(r'^about/$', about)
 ]
